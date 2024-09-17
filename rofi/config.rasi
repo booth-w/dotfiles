@@ -1,0 +1,59 @@
+configuration {
+	modes: "drun";
+	drun {
+		display-name: "";
+	}
+}
+
+* {
+	border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  background-color: #2E3440;
+  text-color: #D8DEE9;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+	padding: 4;
+	size: 12;
+}
+
+window {
+	padding: 0;
+	border: 0;
+}
+
+element normal.normal {
+  background-color: #3B4252;
+  text-color: #D8DEE9;
+}
+
+element alternate.normal {
+  background-color: #3B4252;
+  text-color: #D8DEE9;
+}
+
+scrollbar {
+	handle-color: #4C566A;
+}
+
+inputbar {
+	padding: 4;
+	children: [
+		"entry",
+		"num-filtered-rows",
+		"textbox-num-sep",
+		"num-rows"
+	];
+}
+
+entry {
+	placeholder: "";
+  text-color: #D8DEE9;
+}

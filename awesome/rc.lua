@@ -110,7 +110,7 @@ awful.screen.connect_for_each_screen(function(s)
 		filter = awful.widget.tasklist.filter.currenttags,
 		buttons = gears.table.join(
 			awful.button({}, 1,
-				function (c)
+				function(c)
 					if c == client.focus then
 						c.minimized = true
 					else
@@ -123,17 +123,17 @@ awful.screen.connect_for_each_screen(function(s)
 				end
 			),
 			awful.button({}, 2,
-				function (c)
+				function(c)
 					c:kill()
 				end
 			),
 			awful.button({}, 4,
-				function ()
+				function()
 					awful.client.focus.byidx(-1)
 				end
 			),
 			awful.button({}, 5,
-				function ()
+				function()
 					awful.client.focus.byidx(1)
 				end
 			)
@@ -222,7 +222,7 @@ global_keys = gears.table.join(
 			local screen = awful.screen.focused()
 			screen.mywibox.visible = not screen.mywibox.visible
 		end,
-		{description = "toggle fullscreen", group = "client"}
+		{description = "toggle fullscreen", group="client"}
 	),
 
 	-- change tag
@@ -252,13 +252,13 @@ global_keys = gears.table.join(
 	),
 
 	-- change tag order
-	awful.key({modkey, altkey}, "Left",
+	awful.key({modkey, "Shift"}, "Left",
 		function()
 			awful.tag.move(awful.screen.focused().selected_tag.index - 1, awful.screen.focused().selected_tag)
 		end,
 		{description="swap with previous tag", group="tag"}
 	),
-	awful.key({modkey, altkey}, "Right",
+	awful.key({modkey, "Shift"}, "Right",
 		function()
 			awful.tag.move(awful.screen.focused().selected_tag.index + 1, awful.screen.focused().selected_tag)
 		end,
@@ -353,36 +353,36 @@ global_keys = gears.table.join(
 
 	-- volume
 	awful.key({}, "XF86AudioRaiseVolume",
-		function ()
+		function()
 			awful.util.spawn("amixer set Master 5%+", false)
 		end,
-		{description = "volume up", group = "volume"}
+		{description = "volume up", group="volume"}
 	),
 	awful.key({}, "XF86AudioLowerVolume",
-		function ()
+		function()
 			awful.util.spawn("amixer set Master 5%-", false)
 		end,
-		{description = "volume down", group = "volume"}
+		{description = "volume down", group="volume"}
 	),
 	awful.key({}, "XF86AudioMute",
-		function ()
+		function()
 			awful.util.spawn("amixer set Master toggle", false)
 		end,
-		{description = "toggle mute", group = "volume"}
+		{description = "toggle mute", group="volume"}
 	),
 
 	-- brightness
 	awful.key({}, "XF86MonBrightnessUp",
-		function ()
+		function()
 			change_brightness(1)
 		end,
-		{description = "brightness up", group = "brightness"}
+		{description = "brightness up", group="brightness"}
 	),
 	awful.key({}, "XF86MonBrightnessDown",
-		function ()
+		function()
 			change_brightness(-1)
 		end,
-		{description = "brightness down", group = "brightness"}
+		{description = "brightness down", group="brightness"}
 	),
 
 	-- awesome config
@@ -398,10 +398,10 @@ global_keys = gears.table.join(
 client_keys = gears.table.join(
 	-- close
 	awful.key({modkey}, "w",
-		function (c)
+		function(c)
 			c:kill()
 		end,
-		{description = "close", group = "client"}
+		{description = "close", group="client"}
 	),
 
 	-- change client focus
@@ -434,49 +434,49 @@ client_keys = gears.table.join(
 
 	-- move client to master
 	awful.key({modkey, "Control"}, "Return",
-		function (c)
+		function(c)
 			c:swap(awful.client.getmaster())
 		end,
-		{description = "move to master", group = "client"}
+		{description = "move to master", group="client"}
 	),
 
 	-- move client to next tag
-	awful.key({modkey, "Control", altkey}, "Right",
-		function ()
+	awful.key({modkey, altkey}, "Right",
+		function()
 			local tag = client.focus.screen.tags[client.focus.screen.selected_tag.index + 1]
 			if tag then
 				client.focus:move_to_tag(tag)
 				tag:emit_signal("property::selected", tag, tag.selected)
 			end
 		end,
-		{description = "move focused client to next tag", group = "client"}
+		{description = "move focused client to next tag", group="client"}
 	),
-	awful.key({modkey, "Control", altkey}, "Left",
-		function ()
+	awful.key({modkey, altkey}, "Left",
+		function()
 			local tag = client.focus.screen.tags[client.focus.screen.selected_tag.index - 1]
 			if tag then
 				client.focus:move_to_tag(tag)
 				tag:emit_signal("property::selected", tag, tag.selected)
 			end
 		end,
-		{description = "move focused client to previous tag", group = "client"}
+		{description = "move focused client to previous tag", group="client"}
 	),
 
 	-- minimize
 	awful.key({modkey}, "m",
-		function (c)
+		function(c)
 			c.minimized = true
 		end ,
-		{description = "minimize", group = "client"}
+		{description = "minimize", group="client"}
 	),
 
 	-- maximize
 	awful.key({modkey, "Control"}, "m",
-		function (c)
+		function(c)
 			c.maximized = not c.maximized
 			c:raise()
 		end ,
-		{description = "toggle maximize", group = "client"}
+		{description = "toggle maximize", group="client"}
 	),
 
 	-- floating
@@ -520,31 +520,31 @@ for i = 1, 5 do
 
 		-- View tag only.
 		awful.key({modkey}, "#" .. i + 9,
-			function ()
+			function()
 				local screen = awful.screen.focused()
 				local tag = screen.tags[i]
 				if tag then
 					tag:view_only()
 				end
 			end,
-			{description = "view tag " .. i, group = "tag"}
+			{description = "view tag " .. i, group="tag"}
 		),
 
 		-- Toggle tag display.
 		awful.key({modkey, altkey}, "#" .. i + 9,
-			function ()
+			function()
 				local screen = awful.screen.focused()
 				local tag = screen.tags[i]
 				if tag then
 					awful.tag.viewtoggle(tag)
 				end
 			end,
-			{description = "toggle tag #" .. i, group = "tag"}
+			{description = "toggle tag #" .. i, group="tag"}
 		),
 
 		-- Move client to tag.
 		awful.key({modkey, "Control"}, "#" .. i + 9,
-			function ()
+			function()
 				if client.focus then
 					local tag = client.focus.screen.tags[i]
 					if tag then
@@ -553,12 +553,12 @@ for i = 1, 5 do
 					end
 				end
 			end,
-			{description = "move focused client to tag #" .. i, group = "tag"}
+			{description = "move focused client to tag #" .. i, group="tag"}
 		),
 
 		-- Toggle tag on focused client.
 		awful.key({modkey, "Shift"}, "#" .. i + 9,
-			function ()
+			function()
 				if client.focus then
 					local tag = client.focus.screen.tags[i]
 					if tag then
@@ -567,7 +567,7 @@ for i = 1, 5 do
 					end
 				end
 			end,
-			{description = "toggle focused client on tag #" .. i, group = "tag"}
+			{description = "toggle focused client on tag #" .. i, group="tag"}
 		)
 	)
 end
@@ -585,18 +585,18 @@ global_buttons = gears.table.join(
 -- client button bindings
 client_buttons = gears.table.join(
 	awful.button({}, 1,
-		function (c)
+		function(c)
 			c:emit_signal("request::activate", "mouse_click", {raise = true})
 		end
 	),
 	awful.button({modkey, "Control"}, 1,
-		function (c)
+		function(c)
 			c:emit_signal("request::activate", "mouse_click", {raise = true})
 			awful.mouse.client.move(c)
 		end
 	),
 	awful.button({modkey, "Control"}, 3,
-		function (c)
+		function(c)
 			c:emit_signal("request::activate", "mouse_click", {raise = true})
 			awful.mouse.client.resize(c)
 		end
@@ -665,7 +665,7 @@ awful.rules.rules = {
 }
 
 -- signals
-client.connect_signal("manage", function (c)
+client.connect_signal("manage", function(c)
 	-- starts new clients as slaves (last in the client list)
 	if not awesome.startup then
 		awful.client.setslave(c)

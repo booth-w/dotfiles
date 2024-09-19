@@ -388,7 +388,7 @@ global_keys = gears.table.join(
 	-- awesome config
 	awful.key({modkey}, "XF86Tools",
 		function()
-			awful.util.spawn("codium ~/.config/awesome")
+			awful.util.spawn("codium " .. awful.util.getdir("config"))
 		end,
 		{description="awesome config", group="awesome"}
 	)

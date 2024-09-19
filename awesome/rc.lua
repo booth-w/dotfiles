@@ -661,6 +661,24 @@ awful.rules.rules = {
 		properties = {
 			ontop = true
 		}
+	},
+
+	-- sptlrx
+	{
+		rule_any = {
+			name = {
+				"sptlrx"
+			}
+		},
+		properties = {
+			raise = false,
+			floating = true,
+			ontop = true,
+			width = 400,
+			height = 200,
+			x = awful.screen.focused().geometry.width - 400,
+			y = awful.screen.focused().geometry.height - 200
+		}
 	}
 }
 
@@ -695,17 +713,9 @@ client.connect_signal("mouse::enter", function(c)
 	client.focus = c
 end)
 
--- client name change signal
+-- reaply rules on name change
 client.connect_signal("property::name", function(c)
-	if c.name == "sptlrx" then
-		c.raise = false
-		c.floating = true
-		c.ontop = true
-		c.width = 400
-		c.height = 200
-		c.x = awful.screen.focused().geometry.width - c.width
-		c.y = awful.screen.focused().geometry.height - c.height
-	end
+	awful.rules.apply(c)
 end)
 
 -- set tag names after startup

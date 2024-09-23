@@ -49,6 +49,7 @@ gclone() {
 	cd "$(basename "$1" .git)"
 }
 
+alias ..="cd .."
 alias df="df -T -H"
 alias dot-sync="~/scripts/dot-sync.sh"
 alias download="yt-dlp --embed-thumbnail --add-metadata --sub-langs all,-live_chat --convert-subs srt --embed-subs --download-archive '~/.yt-dlp/archive.txt' --"

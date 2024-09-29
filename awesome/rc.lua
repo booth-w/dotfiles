@@ -715,7 +715,9 @@ end)
 
 -- reaply rules on name change
 client.connect_signal("property::name", function(c)
-	awful.rules.apply(c)
+	if c.name == "sptlrx" then
+		awful.rules.apply(c)
+	end
 end)
 
 -- set tag names after startup

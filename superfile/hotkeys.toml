@@ -32,7 +32,7 @@ open_current_directory_with_editor = ['E', '']
 # other
 pinned_directory = ['ctrl+p', '']
 toggle_dot_file = ['ctrl+h', '.']
-change_panel_mode = ['v', '']
+change_panel_mode = [' ', '']
 open_help_menu = ['?', '']
 open_command_line = [':', '']
 copy_path = ['ctrl+p', '']

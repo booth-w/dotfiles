@@ -23,7 +23,7 @@
     "prefix": "booth-w",
     "body": [
       "<!DOCTYPE html>",
-      "<html>",
+      "<html lang=\"en\">",
       "\t<head>",
       "\t\t<title>Booth-w – $1</title>",
       "\t\t<meta name=\"description\" content=\"booth-w $2\">",

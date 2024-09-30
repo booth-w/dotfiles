@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+PS1="[\u@\h \W\$(git branch 2> /dev/null | grep -e '^*' | awk '{print \$2}' | sed '/./s/.*/ (&)/')]\$ "
 
 shopt -s histappend
 export HISTFILESIZE=

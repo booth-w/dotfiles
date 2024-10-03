@@ -100,9 +100,14 @@
 	"explorer.confirmPasteNative": false,
 	"[go]": {
 		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "never"
+		}
 	},
 	"workbench.activityBar.location": "hidden",
 	"workbench.editor.editorActionsLocation": "hidden",
 	"window.menuBarVisibility": "toggle",
 	"editor.minimap.enabled": false,
+	"go.lintOnSave": "off",
+	"go.vetOnSave": "off",
 }

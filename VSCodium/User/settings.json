@@ -100,5 +100,9 @@
 	"explorer.confirmPasteNative": false,
 	"[go]": {
 		"editor.formatOnSave": false,
-	}
+	},
+	"workbench.activityBar.location": "hidden",
+	"workbench.editor.editorActionsLocation": "hidden",
+	"window.menuBarVisibility": "toggle",
+	"editor.minimap.enabled": false,
 }

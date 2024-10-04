@@ -48,4 +48,4 @@ search_bar = ['ctrl+f', '']
 # Select mode hotkeys (can conflict with other modes, cananot conflict with global hotkeys)
 file_panel_select_mode_items_select_down = ['shift+down', 'J']
 file_panel_select_mode_items_select_up = ['shift+up', 'K']
-file_panel_select_all_items = ['A', '']
+file_panel_select_all_items = ['ctrl+a', '']

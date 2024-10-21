@@ -49,6 +49,10 @@ gclone() {
 	cd "$(basename "$1" .git)"
 }
 
+pclone() {
+	git clone $(awk '{ sub("https://", "https://'"$(sudo cat ~/git/.token)"'@"); print }' <<< $1)
+}
+
 alias ..="cd .."
 alias df="df -T -H"
 alias dot-sync="~/scripts/dot-sync.sh"

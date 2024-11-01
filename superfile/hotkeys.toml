@@ -11,11 +11,13 @@ create_new_file_panel = ['ctrl+n', '']
 next_file_panel = ['tab', 'shift+right']
 previous_file_panel = ['shift+tab', 'shift+left']
 toggle_file_preview_panel = ['f', '']
+open_sort_options_menu = ['o', '']
+toggle_reverse_sort = ['R', '']
 # change focus
 focus_on_process_bar = ['p', '']
 focus_on_sidebar = ['s', '']
 focus_on_metadata = ['m', '']
-# create file/directory and rename
+# create file/directory and rename 
 file_panel_item_create = ['n', '']
 file_panel_item_rename = ['r', '']
 # file operate

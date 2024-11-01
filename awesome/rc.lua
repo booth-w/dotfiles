@@ -73,7 +73,7 @@ awful.screen.connect_for_each_screen(function(s)
 					t:view_only()
 				end
 			),
-			awful.button({modkey, "Control", altkey}, 1,
+			awful.button({modkey, "Control"}, 1,
 				function(t)
 					if client.focus then
 						client.focus:move_to_tag(t)

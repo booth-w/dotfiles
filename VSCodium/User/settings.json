@@ -104,10 +104,11 @@
 			"source.organizeImports": "never"
 		}
 	},
-	"workbench.activityBar.location": "hidden",
 	"workbench.editor.editorActionsLocation": "hidden",
-	"window.menuBarVisibility": "toggle",
 	"editor.minimap.enabled": false,
 	"go.lintOnSave": "off",
 	"go.vetOnSave": "off",
+	"window.menuBarVisibility": "toggle",
+	"workbench.activityBar.location": "hidden",
+	"editor.cursorBlinking": "solid",
 }

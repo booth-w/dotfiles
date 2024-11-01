@@ -111,4 +111,8 @@
 	"window.menuBarVisibility": "toggle",
 	"workbench.activityBar.location": "hidden",
 	"editor.cursorBlinking": "solid",
+	"markdownlint.config": {
+		"no-hard-tabs": false,
+		"ul-indent": false,
+	},
 }

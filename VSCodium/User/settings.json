@@ -62,6 +62,8 @@
 	],
 	"github.copilot.enable": {
 		"*": true,
+		"plaintext": true,
+		"markdown": true,
 		"brainfuck": false
 	},
 	"debug.javascript.autoAttachFilter": "onlyWithFlag",

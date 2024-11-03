@@ -8,7 +8,7 @@ export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-export EDITOR="nano"
+export EDITOR="nvim"
 export TERM="kitty"
 export NNN_TRASH=1
 

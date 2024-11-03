@@ -43,7 +43,7 @@ local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 
 terminal = "kitty"
-editor = "nano"
+editor = "nvim"
 modkey = "Mod4"
 altkey = "Mod1"
 

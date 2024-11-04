@@ -13,6 +13,7 @@ cp .bashrc ~/.bashrc
 cp -r awesome ~/.config/
 cp -r fastfetch ~/.config/
 cp -r kitty ~/.config/
+cp -r nvim ~/.config/
 cp -r rofi ~/.config/
 cp -r superfile ~/.config/
 cp -r VSCodium ~/.config/

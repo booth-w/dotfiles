@@ -114,6 +114,7 @@
 	"workbench.activityBar.location": "hidden",
 	"editor.cursorBlinking": "solid",
 	"markdownlint.config": {
+		"no-bare-urls": false,
 		"no-hard-tabs": false,
 		"ul-indent": false,
 	},

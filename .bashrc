@@ -55,6 +55,7 @@ pclone() {
 
 alias ..="cd .."
 alias df="df -T -H"
+alias diff="git diff --no-index"
 alias dot-sync="~/scripts/dot-sync.sh"
 alias download="yt-dlp --embed-thumbnail --add-metadata --sub-langs all,-live_chat --convert-subs srt --embed-subs --download-archive '~/.yt-dlp/archive.txt' --"
 alias duf="duf --si --hide special --hide-mp /boot"

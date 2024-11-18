@@ -14,6 +14,7 @@ set number
 set relativenumber
 set tabstop=2
 set shiftwidth=2
+set clipboard=unnamedplus
 
 augroup togglerulertype
 	autocmd!
@@ -21,3 +22,18 @@ augroup togglerulertype
 	autocmd InsertLeave * set relativenumber
 augroup END
 
+vnoremap <C-c> "+y
+vnoremap <C-x> "+x
+vnoremap <C-v> "+p
+
+inoremap ( ()<left>
+inoremap { {}<left>
+inoremap [ []<left>
+inoremap < <><left>
+inoremap (<CR> (<CR>)<ESC>O<TAB>
+inoremap {<CR> {<CR>}<ESC>O<TAB>
+inoremap [<CR> [<CR>]<ESC>O<TAB>
+inoremap <<CR> <<CR>><ESC>O<TAB>
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ` ``<left>

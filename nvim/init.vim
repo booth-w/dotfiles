@@ -24,9 +24,8 @@ augroup togglerulertype
 	autocmd InsertLeave * set relativenumber
 augroup END
 
-vnoremap <C-c> "+y
-vnoremap <C-x> "+x
-vnoremap <C-v> "+p
+nnoremap <C-j> 4j
+nnoremap <C-k> 4k
 
 inoremap ( ()<left>
 inoremap { {}<left>
@@ -39,6 +38,10 @@ inoremap <<CR> <<CR>><ESC>O<TAB>
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ` ``<left>
+
+vnoremap <C-c> "+y
+vnoremap <C-x> "+x
+vnoremap <C-v> "+p
 
 let g:gitgutter_sign_added = '|'
 let g:gitgutter_sign_modified = '|'

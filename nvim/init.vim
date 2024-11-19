@@ -24,6 +24,8 @@ augroup togglerulertype
 	autocmd InsertLeave * set relativenumber
 augroup END
 
+noremap <C-z> <Nop>
+
 nnoremap <C-j> 4j
 nnoremap <C-k> 4k
 

@@ -4,6 +4,7 @@ Plug 'github/copilot.vim'
 Plug 'mattn/emmet-vim'
 Plug 'nordtheme/vim'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 
 call plug#end()
@@ -37,3 +38,7 @@ inoremap <<CR> <<CR>><ESC>O<TAB>
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ` ``<left>
+
+let g:gitgutter_sign_added = '|'
+let g:gitgutter_sign_modified = '|'
+let g:gitgutter_sign_removed = '|'

@@ -17,6 +17,7 @@ set tabstop=2
 set shiftwidth=2
 set clipboard=unnamedplus
 set scrolloff=999
+set nowrap
 
 augroup togglerulertype
 	autocmd!

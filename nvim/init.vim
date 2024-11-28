@@ -18,6 +18,8 @@ set shiftwidth=2
 set clipboard=unnamedplus
 set scrolloff=999
 set nowrap
+set foldlevel=99
+set foldmethod=indent
 
 augroup togglerulertype
 	autocmd!
@@ -26,9 +28,8 @@ augroup togglerulertype
 augroup END
 
 noremap <C-z> <Nop>
-
-nnoremap <C-j> 4j
-nnoremap <C-k> 4k
+noremap <C-j> 4j
+noremap <C-k> 4k
 
 inoremap ( ()<left>
 inoremap { {}<left>

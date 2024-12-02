@@ -33,6 +33,7 @@ noremap <C-z> <Nop>
 noremap <C-j> 4j
 noremap <C-k> 4k
 
+nnoremap <silent> <A-z> :set wrap!<CR>
 inoremap ( ()<left>
 inoremap { {}<left>
 inoremap [ []<left>

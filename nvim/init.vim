@@ -1,11 +1,13 @@
 call plug#begin()
 
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'github/copilot.vim'
 Plug 'mattn/emmet-vim'
-Plug 'nordtheme/vim'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'airblade/vim-gitgutter'
+Plug 'kdheepak/lazygit.nvim'
+Plug 'nordtheme/vim'
 Plug 'tpope/vim-surround'
+Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
 

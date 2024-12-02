@@ -22,17 +22,17 @@ set nowrap
 set foldlevel=99
 set foldmethod=indent
 
-augroup togglerulertype
-	autocmd!
-	autocmd InsertEnter * set norelativenumber
-	autocmd InsertLeave * set relativenumber
-augroup END
+autocmd InsertEnter * set norelativenumber
+autocmd InsertLeave * set relativenumber
+
+autocmd CmdlineLeave : echo ""
 
 noremap <C-z> <Nop>
 noremap <C-j> 4j
 noremap <C-k> 4k
 
 nnoremap <silent> <A-z> :set wrap!<CR>
+
 inoremap ( ()<left>
 inoremap { {}<left>
 inoremap [ []<left>

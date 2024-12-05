@@ -46,7 +46,7 @@ inoremap ' ''<left>
 inoremap ` ``<left>
 
 vnoremap <C-c> "+y
-vnoremap <C-x> "+x
+vnoremap <C-x> "+d
 vnoremap <C-v> "+p
 
 let g:gitgutter_sign_added = '|'

@@ -49,6 +49,7 @@ vnoremap <C-c> "+y
 vnoremap <C-x> "+d
 vnoremap <C-v> "+p
 
+let g:python_recommended_style = 0
 let g:gitgutter_sign_added = '|'
 let g:gitgutter_sign_modified = '|'
 let g:gitgutter_sign_removed = '|'

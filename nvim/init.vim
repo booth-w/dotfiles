@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-commentary'
 Plug 'github/copilot.vim'
 Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'

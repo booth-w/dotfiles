@@ -6,6 +6,10 @@ Plug 'github/copilot.vim'
 Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'kdheepak/lazygit.nvim'
+Plug 'preservim/vim-markdown'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'tree-sitter-grammars/tree-sitter-markdown'
 Plug 'nordtheme/vim'
 Plug 'tpope/vim-surround'
 Plug 'ThePrimeagen/vim-be-good'
@@ -52,8 +56,11 @@ vnoremap <C-c> "+y
 vnoremap <C-x> "+d
 vnoremap <C-v> "+p
 
+autocmd FileType markdown nnoremap <buffer> gt :Toc<CR>
+
 let g:python_recommended_style = 0
 let g:markdown_recommended_style = 0
+
 let g:gitgutter_sign_added = '|'
 let g:gitgutter_sign_modified = '|'
 let g:gitgutter_sign_removed = '|'

@@ -20,6 +20,7 @@ set tabstop=2
 set shiftwidth=2
 set scrolloff=999
 set nowrap
+set linebreak
 set formatoptions=nl
 set foldlevel=99
 set foldmethod=indent

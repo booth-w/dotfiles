@@ -38,6 +38,7 @@ noremap <C-z> <Nop>
 noremap <C-j> 4j
 noremap <C-k> 4k
 
+nnoremap <C-a> ggVG
 nnoremap <silent> <A-z> :set wrap!<CR>
 
 inoremap ( ()<left>

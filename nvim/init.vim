@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'tpope/vim-commentary'
 Plug 'github/copilot.vim'
 Plug 'mattn/emmet-vim'
@@ -28,11 +29,14 @@ set linebreak
 set formatoptions=nl
 set foldlevel=99
 set foldmethod=indent
+set termguicolors
 
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
 
 autocmd CmdlineLeave : echo ""
+
+lua require'colorizer'.setup()
 
 noremap <C-z> <Nop>
 noremap <C-j> 4j

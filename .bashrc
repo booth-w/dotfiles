@@ -11,18 +11,6 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export EDITOR="nvim"
 export TERM="kitty"
 export MANPAGER="nvim +Man!"
-export NNN_TRASH=1
-
-nnn() {
-	export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-
-	command nnn "$@"
-
-	[ ! -f "$NNN_TMPFILE" ] || {
-		. "$NNN_TMPFILE"
-		rm -f -- "$NNN_TMPFILE" > /dev/null
-	}
-}
 
 spf() {
 	export SPF_LAST_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/superfile/lastdir"

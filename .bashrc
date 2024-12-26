@@ -10,6 +10,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export EDITOR="nvim"
 export TERM="kitty"
+export MANPAGER="nvim +Man!"
 export NNN_TRASH=1
 
 nnn() {

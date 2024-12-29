@@ -304,6 +304,12 @@ global_keys = gears.table.join(
 		end,
 		{description="open gromit-mpx", group="launcher"}
 	),
+	awful.key({modkey, "Control", altkey, "Shift"}, "s",
+		function()
+			awful.spawn.with_shell("pkill screenkey || screenkey -g 400x200+1200+700")
+		end,
+		{description="toggle screenkey", group="launcher"}
+	),
 
 	-- rofi
 	awful.key({modkey}, "space",

@@ -8,7 +8,9 @@ Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'preservim/vim-markdown'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'tree-sitter-grammars/tree-sitter-markdown'
 Plug 'nordtheme/vim'
@@ -44,6 +46,8 @@ noremap <C-k> 4k
 
 nnoremap <C-a> ggVG
 nnoremap <silent> <A-z> :set wrap!<CR>
+nnoremap <Leader>ff :Telescope find_files<CR>
+nnoremap <Leader>fg :Telescope live_grep<CR>
 
 inoremap ( ()<left>
 inoremap { {}<left>

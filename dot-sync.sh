@@ -11,6 +11,7 @@ git pull
 
 cp .bashrc ~/.bashrc
 cp -r awesome ~/.config/
+cp -r bottom ~/.config/
 cp -r fastfetch ~/.config/
 cp -r kitty ~/.config/
 cp -r nvim ~/.config/

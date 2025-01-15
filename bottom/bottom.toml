@@ -1,0 +1,36 @@
+[flags]
+group_processes = true
+time_delta = 10000
+process_memory_as_value = true
+show_table_scroll_position = true
+memory_legend = "top-left"
+network_legend = "top-left"
+
+[[row]]
+  ratio=3
+  [[row.child]]
+  type="cpu"
+[[row]]
+	ratio=3
+	[[row.child]]
+		type="mem"
+	[[row.child]]
+		type="temp"
+	[[row.child]]
+		type="disk"
+[[row]]
+  ratio=4
+  [[row.child]]
+    type="net"
+  [[row.child]]
+		ratio=2
+		type="proc"
+    default=true
+
+[disk.mount_filter]
+list = ["/boot"]
+
+[network.interface_filter]
+is_list_ignored = false
+regex = true
+list = ["eth.+", "en.+", "wl.+"]

@@ -27,6 +27,9 @@ network_legend = "top-left"
 		type="proc"
     default=true
 
+[cpu]
+default = "average"
+
 [disk.mount_filter]
 list = ["/boot"]
 

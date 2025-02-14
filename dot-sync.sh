@@ -17,5 +17,4 @@ cp -r kitty ~/.config/
 cp -r nvim ~/.config/
 cp -r rofi ~/.config/
 cp -r superfile ~/.config/
-cp -r VSCodium ~/.config/
 cp dot-sync.sh ~/scripts/

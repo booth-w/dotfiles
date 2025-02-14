@@ -17,4 +17,6 @@ cp -r kitty ~/.config/
 cp -r nvim ~/.config/
 cp -r rofi ~/.config/
 cp -r superfile ~/.config/
+
+mkdir -p ~/scripts/
 cp dot-sync.sh ~/scripts/

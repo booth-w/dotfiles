@@ -31,6 +31,7 @@ set linebreak
 set formatoptions=nl
 set foldlevel=99
 set foldmethod=indent
+set foldminlines=0
 set termguicolors
 
 autocmd InsertEnter * set norelativenumber

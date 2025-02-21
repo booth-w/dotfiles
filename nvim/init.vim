@@ -63,6 +63,7 @@ inoremap <<CR> <<CR>><ESC>O
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ` ``<left>
+inoremap <C-BS> <C-w>
 
 vnoremap <C-c> "+y
 vnoremap <C-x> "+d

@@ -46,17 +46,19 @@ noremap <C-j> 4j
 noremap <C-k> 4k
 
 nnoremap <C-a> ggVG
+nnoremap <A-j> ddjP==
+nnoremap <A-k> ddkP==
 nnoremap <silent> <A-z> :set wrap!<CR>
 nnoremap <Leader>ff :Telescope find_files<CR>
 nnoremap <Leader>fg :Telescope live_grep<CR>
 
 inoremap ( ()<left>
-inoremap { {}<left>
 inoremap [ []<left>
+inoremap { {}<left>
 inoremap < <><left>
 inoremap (<CR> (<CR>)<ESC>O
-inoremap {<CR> {<CR>}<ESC>O
 inoremap [<CR> [<CR>]<ESC>O
+inoremap {<CR> {<CR>}<ESC>O
 inoremap <<CR> <<CR>><ESC>O
 inoremap " ""<left>
 inoremap ' ''<left>

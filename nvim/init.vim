@@ -21,6 +21,8 @@ call plug#end()
 
 colorscheme nord
 
+set title
+
 set number
 set relativenumber
 

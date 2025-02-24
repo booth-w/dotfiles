@@ -23,15 +23,21 @@ colorscheme nord
 
 set number
 set relativenumber
+
 set tabstop=2
 set shiftwidth=2
+
 set scrolloff=999
+
 set nowrap
 set linebreak
+
 set formatoptions=nl
+
 set foldlevel=99
 set foldmethod=indent
 set foldminlines=0
+
 set termguicolors
 
 autocmd InsertEnter * set norelativenumber
@@ -42,13 +48,17 @@ autocmd CmdlineLeave : echo ""
 lua require'colorizer'.setup()
 
 noremap <C-z> <Nop>
+
 noremap <C-j> 4j
 noremap <C-k> 4k
 
 nnoremap <C-a> ggVG
+
 nnoremap <A-j> ddjP==
 nnoremap <A-k> ddkP==
+
 nnoremap <silent> <A-z> :set wrap!<CR>
+
 nnoremap <Leader>ff :Telescope find_files<CR>
 nnoremap <Leader>fg :Telescope live_grep<CR>
 
@@ -56,13 +66,16 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap < <><left>
+
 inoremap (<CR> (<CR>)<ESC>O
 inoremap [<CR> [<CR>]<ESC>O
 inoremap {<CR> {<CR>}<ESC>O
 inoremap <<CR> <<CR>><ESC>O
+
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ` ``<left>
+
 inoremap <C-BS> <C-w>
 
 vnoremap <C-c> "+y

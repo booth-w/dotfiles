@@ -1,21 +1,38 @@
 call plug#begin()
 
+" highlight trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
+" colourise hex colors
 Plug 'norcalli/nvim-colorizer.lua'
+" comments (gc)
 Plug 'tpope/vim-commentary'
+" copilot
 Plug 'github/copilot.vim'
+" emmet
 Plug 'mattn/emmet-vim'
+" mark git changes
 Plug 'airblade/vim-gitgutter'
+" indent lines
 Plug 'lukas-reineke/indent-blankline.nvim'
+" lazygit
 Plug 'kdheepak/lazygit.nvim'
+" markdown stuff
 Plug 'preservim/vim-markdown'
+" telescope dependency
 Plug 'nvim-lua/plenary.nvim'
+" markdown preview
 Plug 'MeanderingProgrammer/render-markdown.nvim'
+" telescope
 Plug 'nvim-telescope/telescope.nvim'
+" treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
+" treesitter for markdown
 Plug 'tree-sitter-grammars/tree-sitter-markdown'
+" nord theme
 Plug 'nordtheme/vim'
+" change surround stuff (cs, ys, ds)
 Plug 'tpope/vim-surround'
+" vim practice
 Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()

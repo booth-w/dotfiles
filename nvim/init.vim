@@ -6,6 +6,7 @@ Plug 'tpope/vim-commentary'
 Plug 'github/copilot.vim'
 Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'preservim/vim-markdown'
 Plug 'nvim-lua/plenary.nvim'
@@ -18,6 +19,8 @@ Plug 'tpope/vim-surround'
 Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
+
+lua require("ibl").setup()
 
 colorscheme nord
 
@@ -42,12 +45,12 @@ set foldminlines=0
 
 set termguicolors
 
+lua require("colorizer").setup()
+
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
 
 autocmd CmdlineLeave : echo ""
-
-lua require'colorizer'.setup()
 
 noremap <C-z> <Nop>
 

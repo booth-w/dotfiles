@@ -16,6 +16,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'lukas-reineke/indent-blankline.nvim'
 " lazygit
 Plug 'kdheepak/lazygit.nvim'
+" lsp
+Plug 'neovim/nvim-lspconfig'
 " markdown stuff
 Plug 'preservim/vim-markdown'
 " telescope dependency
@@ -37,6 +39,7 @@ Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
 
+lua require("lspconfig").pyright.setup{}
 lua require("ibl").setup()
 
 colorscheme nord

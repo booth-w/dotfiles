@@ -22,6 +22,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'preservim/vim-markdown'
 " telescope dependency
 Plug 'nvim-lua/plenary.nvim'
+" swap diff
+Plug 'chrisbra/Recover.vim'
 " markdown preview
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 " telescope

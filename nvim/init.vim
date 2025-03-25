@@ -114,6 +114,8 @@ nnoremap <silent> <A-z> :set wrap!<CR>
 nnoremap <Leader>ff :Telescope find_files<CR>
 nnoremap <Leader>fg :Telescope live_grep<CR>
 
+nnoremap <Leader>lg :LazyGit<CR>
+
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>

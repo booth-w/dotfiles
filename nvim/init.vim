@@ -2,6 +2,10 @@ call plug#begin()
 
 " highlight trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
+" autocomplete
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/vim-vsnip'
 " colourise hex colors
 Plug 'norcalli/nvim-colorizer.lua'
 " comments (gc)
@@ -41,8 +45,29 @@ Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
 
-lua require("lspconfig").pyright.setup{}
 lua require("ibl").setup()
+
+lua <<EOF
+local cmp = require("cmp")
+
+cmp.setup({
+	snippet = {
+		expand = function(args)
+			vim.fn["vsnip#anonymous"](args.body)
+		end,
+	},
+	sources = cmp.config.sources({
+		{name = "nvim_lsp"}
+	}, {
+		{name = "buffer"}
+	})
+})
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+require("lspconfig")["pyright"].setup {
+	capabilities = capabilities
+}
+EOF
 
 colorscheme nord
 

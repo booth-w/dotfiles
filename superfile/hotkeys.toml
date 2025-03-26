@@ -34,7 +34,7 @@ compress_file = ['ctrl+r', '']
 open_file_with_editor = ['e', '']
 open_current_directory_with_editor = ['E', '']
 # other
-pinned_directory = ['ctrl+p', '']
+pinned_directory = ['P', '']
 toggle_dot_file = ['ctrl+h', '.']
 change_panel_mode = [' ', '']
 open_help_menu = ['?', '']

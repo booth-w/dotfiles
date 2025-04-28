@@ -26,7 +26,9 @@ element-icon {
 
 window {
 	padding: 0;
-	border: 0;
+	border: 2px;
+	border-color: #4C566A;
+	border-radius: 8px;
 }
 
 element normal.normal {
@@ -56,4 +58,8 @@ inputbar {
 entry {
 	placeholder: "";
   text-color: #D8DEE9;
+}
+
+listview {
+	border: 0;
 }

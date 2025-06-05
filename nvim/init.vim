@@ -79,6 +79,9 @@ require("lspconfig")["pyright"].setup {
 require("lspconfig")["cssls"].setup {
 	capabilities = capabilities
 }
+require("lspconfig")["gopls"].setup {
+	capabilities = capabilities
+}
 EOF
 
 colorscheme nord

@@ -44,6 +44,8 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 
 terminal = "kitty"
 editor = "nvim"
+web_browser = "librewolf"
+web_browser_backup = "firefox"
 modkey = "Mod4"
 altkey = "Mod1"
 
@@ -297,6 +299,18 @@ global_keys = gears.table.join(
 			awful.spawn("nemo")
 		end,
 		{description="open nemo", group="launcher"}
+	),
+	awful.key({"Control", altkey}, "b",
+		function()
+			awful.spawn(web_browser)
+		end,
+		{description="open web browser (" .. web_browser .. ")", group="launcher"}
+	),
+	awful.key({"Control", altkey, "Shift"}, "b",
+		function()
+			awful.spawn(web_browser_backup)
+		end,
+		{description="open backup web browser (" .. web_browser_backup .. ")", group="launcher"}
 	),
 	awful.key({modkey, altkey}, "d",
 		function()

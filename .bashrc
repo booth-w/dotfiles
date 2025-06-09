@@ -12,6 +12,8 @@ export EDITOR="nvim"
 export TERM="xterm-kitty"
 export MANPAGER="nvim +Man!"
 
+eval "$(fzf --bash)"
+
 spf() {
 	export SPF_LAST_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/superfile/lastdir"
 

@@ -9,7 +9,7 @@ require("awful.autofocus")
 require("logging")
 
 
--- Handle startup errors
+-- handle startup errors
 if awesome.startup_errors then
 	naughty.notify({
 		preset = naughty.config.presets.critical,
@@ -18,7 +18,7 @@ if awesome.startup_errors then
 	})
 end
 
--- Handle runtime errors after startup
+-- handle runtime errors after startup
 do
 	local in_error = false
 	awesome.connect_signal("debug::error", function(err)
@@ -227,20 +227,6 @@ global_keys = gears.table.join(
 		{description = "toggle fullscreen", group="client"}
 	),
 
-	-- change tag
-	awful.key({modkey}, "Left",
-		function()
-			awful.tag.viewprev()
-		end,
-		{description="view previous", group="tag"}
-	),
-	awful.key({modkey}, "Right",
-		function()
-			awful.tag.viewnext()
-		end,
-		{description="view next", group="tag"}
-	),
-
 	-- focus master
 	awful.key({"Control", altkey}, "Return",
 		function()
@@ -251,20 +237,6 @@ global_keys = gears.table.join(
 			end
 		end,
 		{description="focus to master", group="client"}
-	),
-
-	-- change tag order
-	awful.key({modkey, "Shift"}, "Left",
-		function()
-			awful.tag.move(awful.screen.focused().selected_tag.index - 1, awful.screen.focused().selected_tag)
-		end,
-		{description="swap with previous tag", group="tag"}
-	),
-	awful.key({modkey, "Shift"}, "Right",
-		function()
-			awful.tag.move(awful.screen.focused().selected_tag.index + 1, awful.screen.focused().selected_tag)
-		end,
-		{description="swap with next tag", group="tag"}
 	),
 
 	-- change layout
@@ -534,11 +506,44 @@ client_keys = gears.table.join(
 )
 
 -- tag key bindings
+global_keys = gears.table.join(
+	global_keys,
+
+	-- change tag
+	awful.key({modkey}, "Left",
+		function()
+			awful.tag.viewprev()
+		end,
+		{description="view previous", group="tag"}
+	),
+	awful.key({modkey}, "Right",
+		function()
+			awful.tag.viewnext()
+		end,
+		{description="view next", group="tag"}
+	),
+
+	-- change tag order
+	awful.key({modkey, "Shift"}, "Left",
+		function()
+			awful.tag.move(awful.screen.focused().selected_tag.index - 1, awful.screen.focused().selected_tag)
+		end,
+		{description="swap with previous tag", group="tag"}
+	),
+	awful.key({modkey, "Shift"}, "Right",
+		function()
+			awful.tag.move(awful.screen.focused().selected_tag.index + 1, awful.screen.focused().selected_tag)
+		end,
+		{description="swap with next tag", group="tag"}
+	)
+)
+
+-- tag number key bindings
 for i = 1, 5 do
 	global_keys = gears.table.join(
 		global_keys,
 
-		-- View tag only.
+		-- view tag only.
 		awful.key({modkey}, "#" .. i + 9,
 			function()
 				local screen = awful.screen.focused()
@@ -550,7 +555,7 @@ for i = 1, 5 do
 			{description = "view tag " .. i, group="tag"}
 		),
 
-		-- Toggle tag display.
+		-- toggle tag view.
 		awful.key({modkey, altkey}, "#" .. i + 9,
 			function()
 				local screen = awful.screen.focused()
@@ -562,7 +567,7 @@ for i = 1, 5 do
 			{description = "toggle tag #" .. i, group="tag"}
 		),
 
-		-- Move client to tag.
+		-- move client to tag.
 		awful.key({modkey, "Control"}, "#" .. i + 9,
 			function()
 				if client.focus then
@@ -576,7 +581,7 @@ for i = 1, 5 do
 			{description = "move focused client to tag #" .. i, group="tag"}
 		),
 
-		-- Toggle tag on focused client.
+		-- toggle client on tag.
 		awful.key({modkey, "Shift"}, "#" .. i + 9,
 			function()
 				if client.focus then

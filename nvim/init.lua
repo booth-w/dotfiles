@@ -34,7 +34,7 @@ require("lazy").setup({
 
 	-- lazygit
 	{"kdheepak/lazygit.nvim"},
-	
+
 	-- git gutter
 	{"airblade/vim-gitgutter"},
 
@@ -86,6 +86,9 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldminlines = 0
 
 vim.opt.termguicolors = true
+
+-- trailing whitespace
+vim.g.better_whitespace_guicolor="#BF616A"
 
 local noremap = { noremap = true }
 

@@ -250,6 +250,10 @@ lspconfig.gopls.setup{
 	capabilities = capabilities
 }
 
+-- javascript/typescript
+lspconfig.ts_ls.setup{
+	capabilities = capabilities,
+}
 -- css
 lspconfig.cssls.setup{
 	capabilities = capabilities

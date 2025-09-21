@@ -28,6 +28,7 @@ require("lazy").setup({
 
 	-- telescope
 	{"nvim-telescope/telescope.nvim"},
+	{"nvim-telescope/telescope-file-browser.nvim"},
 
 	-- surround (cs, ys, ds)
 	{"tpope/vim-surround"},
@@ -106,6 +107,7 @@ vim.keymap.set("n", "<A-z>", ":set wrap!<CR>", { noremap = true, silent = true }
 
 vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>", noremap)
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>", noremap)
+vim.keymap.set("n", "<Leader>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", noremap)
 
 vim.keymap.set("n", "<Leader>lg", ":LazyGit<CR>", noremap)
 

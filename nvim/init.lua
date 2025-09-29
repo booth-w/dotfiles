@@ -39,6 +39,9 @@ require("lazy").setup({
 	-- git gutter
 	{"airblade/vim-gitgutter"},
 
+	-- c# lsp
+	{"OmniSharp/omnisharp-vim"},
+
 	-- copilot
 	{"github/copilot.vim"},
 
@@ -256,7 +259,17 @@ lspconfig.gopls.setup{
 lspconfig.ts_ls.setup{
 	capabilities = capabilities,
 }
+
 -- css
 lspconfig.cssls.setup{
 	capabilities = capabilities
+}
+
+-- c#
+lspconfig.omnisharp.setup{
+	capabilities = capabilities,
+	cmd = {"omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid())},
+	root_dir = function ()
+		return vim.loop.cwd()
+	end,
 }

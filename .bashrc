@@ -45,7 +45,7 @@ pclone() {
 }
 
 alias ..="cd .."
-alias bat="bat --theme Nord"
+alias bat="bat -p --theme Nord"
 alias describe="git describe --tags | sed 's/\([^-]*-g\)/r\1/'"
 alias df="df -T -H"
 alias diff="git diff --no-index"

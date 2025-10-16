@@ -251,6 +251,10 @@ cmp.setup({
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+vim.diagnostic.config({
+	virtual_text = true
+})
+
 -- python
 lspconfig.pyright.setup{
 	capabilities = capabilities

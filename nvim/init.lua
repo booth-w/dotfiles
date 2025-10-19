@@ -107,6 +107,8 @@ vim.keymap.set("n", "<C-a>", "ggVG", noremap)
 vim.keymap.set("n", "<A-j>", "ddjP==", noremap)
 vim.keymap.set("n", "<A-k>", "ddkP==", noremap)
 
+vim.keymap.set("n", "g{", "f{V%", noremap)
+
 vim.keymap.set("n", "<A-z>", ":set wrap!<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>", noremap)

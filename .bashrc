@@ -8,6 +8,8 @@ export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+shopt -s globstar nullglob
+
 export EDITOR="nvim"
 export TERM="xterm-kitty"
 export MANPAGER="nvim +Man!"

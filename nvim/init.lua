@@ -48,6 +48,9 @@ require("lazy").setup({
 	-- emmet
 	{"mattn/emmet-vim"},
 
+	-- toggler
+	{"nguyenvukhang/nvim-toggler"},
+
 	-- markdown
 	{"preservim/vim-markdown"},
 
@@ -218,6 +221,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- nord theme
 vim.cmd("colorscheme nord")
+
+-- toggler
+require('nvim-toggler').setup()
 
 -- indent lines
 require("ibl").setup()

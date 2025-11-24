@@ -256,38 +256,14 @@ cmp.setup({
 	})
 })
 
-local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 vim.diagnostic.config({
 	virtual_text = true
 })
 
--- python
-lspconfig.pyright.setup{
-	capabilities = capabilities
-}
-
--- go
-lspconfig.gopls.setup{
-	capabilities = capabilities
-}
-
--- javascript/typescript
-lspconfig.ts_ls.setup{
-	capabilities = capabilities,
-}
-
--- css
-lspconfig.cssls.setup{
-	capabilities = capabilities
-}
-
--- c#
-lspconfig.omnisharp.setup{
-	capabilities = capabilities,
-	cmd = {"omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid())},
-	root_dir = function ()
-		return vim.loop.cwd()
-	end,
-}
+vim.lsp.enable({
+	"pyright",
+	"gopls",
+	"ts_ls",
+	"cssls",
+	"omnisharp"
+})

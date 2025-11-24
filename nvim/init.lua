@@ -221,6 +221,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- nord theme
 vim.cmd("colorscheme nord")
+vim.cmd("highlight NormalFloat guibg=#3B4252 guifg=#ECEFF4")
+vim.cmd("highlight FloatBorder guibg=#2E3440 guifg=#4C566A")
 
 -- toggler
 require('nvim-toggler').setup()
@@ -253,7 +255,11 @@ cmp.setup({
 		{name = "nvim_lsp"}
 	}, {
 		{name = "buffer"}
-	})
+	}),
+	window = {
+		documentation = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
+	}
 })
 
 vim.diagnostic.config({

@@ -271,5 +271,6 @@ vim.lsp.enable({
 	"gopls",
 	"ts_ls",
 	"cssls",
+	"lua_ls",
 	"omnisharp"
 })

@@ -241,6 +241,7 @@ require("colorizer").setup()
 
 -- telescope
 local ts_actions = require("telescope.actions")
+local fb_actions = require("telescope").extensions.file_browser.actions
 require("telescope").setup({
 	defaults = {
 		mappings = {
@@ -251,8 +252,30 @@ require("telescope").setup({
 				["<C-c>"] = function() vim.cmd("stopinsert") end
 			}
 		}
+	},
+	extensions = {
+		file_browser = {
+			mappings = {
+				["n"] = {
+					["l"] = "select_default",
+					["<C-h>"] = "preview_scrolling_left",
+					["<C-j>"] = "preview_scrolling_down",
+					["<C-k>"] = "preview_scrolling_up",
+					["<C-l>"] = "preview_scrolling_right"
+				},
+				["i"] = {
+					["<C-h>"] = "preview_scrolling_left",
+					["<C-j>"] = "preview_scrolling_down",
+					["<C-k>"] = "preview_scrolling_up",
+					["<C-l>"] = "preview_scrolling_right"
+				}
+			},
+			grouped = true
+		}
 	}
 })
+
+require("telescope").load_extension("file_browser")
 
 -- lsp
 local cmp = require("cmp")

@@ -102,7 +102,7 @@ vim.g.better_whitespace_guicolor="#BF616A"
 
 local noremap = { noremap = true }
 
-vim.keymap.set("i", "<C-c>", "<Esc>", noremap)
+vim.keymap.set({"n", "i"}, "<C-c>", "<Esc>", noremap)
 vim.keymap.set("", "<C-z>", "<Nop>", noremap)
 
 vim.keymap.set("", "<C-j>", "4j", noremap)

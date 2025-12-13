@@ -239,6 +239,21 @@ require("ibl").setup()
 -- colourise text colours
 require("colorizer").setup()
 
+-- telescope
+local ts_actions = require("telescope.actions")
+require("telescope").setup({
+	defaults = {
+		mappings = {
+			["n"] = {
+				["<C-c>"] = ts_actions.close
+			},
+			["i"] = {
+				["<C-c>"] = function() vim.cmd("stopinsert") end
+			}
+		}
+	}
+})
+
 -- lsp
 local cmp = require("cmp")
 

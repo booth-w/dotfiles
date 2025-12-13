@@ -94,6 +94,9 @@ vim.opt.foldminlines = 0
 
 vim.opt.termguicolors = true
 
+-- disable intro
+vim.opt.shortmess:append("I")
+
 -- trailing whitespace
 vim.g.better_whitespace_guicolor="#BF616A"
 

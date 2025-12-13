@@ -144,6 +144,9 @@ vim.keymap.set("v", "<C-c>", '"+y', noremap)
 vim.keymap.set("v", "<C-x>", '"+d', noremap)
 vim.keymap.set("v", "<C-v>", '"+p', noremap)
 
+vim.keymap.set("c", "<C-j>", "<C-n>", noremap)
+vim.keymap.set("c", "<C-k>", "<C-p>", noremap)
+
 vim.g.copilot_no_tab_map = true
 vim.keymap.set("i", "<C-TAB>", "<Plug>(copilot-accept-line)", noremap)
 vim.keymap.set("i", "<M-TAB>", "<Plug>(copilot-accept-word)", noremap)

@@ -29,10 +29,12 @@ require("lazy").setup({
 	-- telescope
 	{"nvim-telescope/telescope.nvim"},
 	{"nvim-telescope/telescope-file-browser.nvim"},
+	{"nvim-telescope/telescope-fzf-native.nvim",
+		build = "make"
+	},
 
 	-- harpoon
-	{
-		"ThePrimeagen/harpoon",
+	{"ThePrimeagen/harpoon",
 		branch = "harpoon2"
 	},
 
@@ -292,6 +294,7 @@ require("telescope").setup({
 })
 
 require("telescope").load_extension("file_browser")
+require("telescope").load_extension("fzf")
 
 -- harpoon
 local harpoon = require("harpoon")

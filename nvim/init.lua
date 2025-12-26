@@ -30,6 +30,12 @@ require("lazy").setup({
 	{"nvim-telescope/telescope.nvim"},
 	{"nvim-telescope/telescope-file-browser.nvim"},
 
+	-- harpoon
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2"
+	},
+
 	-- surround (cs, ys, ds)
 	{"tpope/vim-surround"},
 
@@ -110,8 +116,8 @@ vim.keymap.set("", "<C-k>", "4k", noremap)
 
 vim.keymap.set("n", "<C-a>", "ggVG", noremap)
 
-vim.keymap.set("n", "<A-j>", "ddjP==", noremap)
-vim.keymap.set("n", "<A-k>", "ddkP==", noremap)
+vim.keymap.set("n", "<C-A-j>", "ddjP==", noremap)
+vim.keymap.set("n", "<C-A-k>", "ddkP==", noremap)
 
 vim.keymap.set("n", "g{", "f{V%", noremap)
 
@@ -276,6 +282,25 @@ require("telescope").setup({
 })
 
 require("telescope").load_extension("file_browser")
+
+-- harpoon
+local harpoon = require("harpoon")
+
+harpoon:setup({
+	settings = {
+		save_on_toggle = true,
+		sync_on_ui_close = true
+	}
+})
+local list = harpoon:list()
+
+vim.keymap.set("n", "<Leader>a", function() list:add() end, noremap)
+vim.keymap.set("n", "<A-h>", function() list:select(1) end, noremap)
+vim.keymap.set("n", "<A-j>", function() list:select(2) end, noremap)
+vim.keymap.set("n", "<A-k>", function() list:select(3) end, noremap)
+vim.keymap.set("n", "<A-l>", function() list:select(4) end, noremap)
+vim.keymap.set("n", "<A-;>", function() harpoon.ui:toggle_quick_menu(list) end, noremap)
+vim.keymap.set("n", "q", function() harpoon.ui:toggle_quick_menu(list) end, noremap)
 
 -- lsp
 local cmp = require("cmp")

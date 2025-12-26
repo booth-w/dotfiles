@@ -252,10 +252,19 @@ require("telescope").setup({
 	defaults = {
 		mappings = {
 			["n"] = {
-				["<C-c>"] = ts_actions.close
+				["<C-c>"] = "close",
+				["l"] = "select_default",
+				["<C-h>"] = "preview_scrolling_left",
+				["<C-j>"] = "preview_scrolling_down",
+				["<C-k>"] = "preview_scrolling_up",
+				["<C-l>"] = "preview_scrolling_right"
 			},
 			["i"] = {
-				["<C-c>"] = function() vim.cmd("stopinsert") end
+				["<C-c>"] = function() vim.cmd("stopinsert") end,
+				["<C-h>"] = "preview_scrolling_left",
+				["<C-j>"] = "preview_scrolling_down",
+				["<C-k>"] = "preview_scrolling_up",
+				["<C-l>"] = "preview_scrolling_right"
 			}
 		}
 	},
@@ -263,18 +272,9 @@ require("telescope").setup({
 		file_browser = {
 			mappings = {
 				["n"] = {
-					["l"] = "select_default",
-					["<C-h>"] = "preview_scrolling_left",
-					["<C-j>"] = "preview_scrolling_down",
-					["<C-k>"] = "preview_scrolling_up",
-					["<C-l>"] = "preview_scrolling_right"
+					["h"] = fb_actions.goto_parent_dir,
+					["."] = fb_actions.toggle_hidden
 				},
-				["i"] = {
-					["<C-h>"] = "preview_scrolling_left",
-					["<C-j>"] = "preview_scrolling_down",
-					["<C-k>"] = "preview_scrolling_up",
-					["<C-l>"] = "preview_scrolling_right"
-				}
 			},
 			grouped = true
 		}
@@ -300,7 +300,6 @@ vim.keymap.set("n", "<A-j>", function() list:select(2) end, noremap)
 vim.keymap.set("n", "<A-k>", function() list:select(3) end, noremap)
 vim.keymap.set("n", "<A-l>", function() list:select(4) end, noremap)
 vim.keymap.set("n", "<A-;>", function() harpoon.ui:toggle_quick_menu(list) end, noremap)
-vim.keymap.set("n", "q", function() harpoon.ui:toggle_quick_menu(list) end, noremap)
 
 -- lsp
 local cmp = require("cmp")

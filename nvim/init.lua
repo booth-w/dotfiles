@@ -68,6 +68,9 @@ require("lazy").setup({
 	-- swap file diff
 	{"chrisbra/recover.vim"},
 
+	-- base n line numbers
+	{"mluders/comfy-line-numbers.nvim"},
+
 	-- indent lines
 	{"lukas-reineke/indent-blankline.nvim"},
 
@@ -240,6 +243,30 @@ vim.cmd("highlight FloatBorder guibg=#2E3440 guifg=#4C566A")
 
 -- toggler
 require('nvim-toggler').setup()
+
+-- base n line numbers
+require("comfy-line-numbers").setup({
+	labels = (function()
+		local labels = {}
+		local base = 4
+		local max = 50
+
+		for i = 1, max do
+			local tempI = i
+			local label = ""
+
+			while tempI > 0 do
+				local digit = (tempI - 1) % base + 1
+				label = tostring(digit) .. label
+				tempI = math.floor((tempI - 1) / base)
+			end
+
+			labels[i] = label
+		end
+
+		return labels
+	end)()
+})
 
 -- indent lines
 require("ibl").setup()

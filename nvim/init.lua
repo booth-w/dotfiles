@@ -33,6 +33,9 @@ require("lazy").setup({
 		build = "make"
 	},
 
+	-- auto shiftwidth expandtab
+	{"tpope/vim-sleuth"},
+
 	-- harpoon
 	{"ThePrimeagen/harpoon",
 		branch = "harpoon2"

@@ -385,5 +385,18 @@ vim.lsp.enable({
 	"ts_ls",
 	"cssls",
 	"lua_ls",
-	"omnisharp"
+	"omnisharp",
+	"yamlls"
+}, {
+	yamlls = {
+		settings = {
+			yaml = {
+				schemas = {
+					["https://json.schemastore.org/github-workflow.json"] = ".github/workflows/*",
+					["https://github.com/compose-spec/compose-go/blob/main/schema/compose-spec.json"] = "docker-compose.y*ml",
+					["https://spec.openapis.org/oas/3.2/schema/2025-09-17"] = {"openapi*.y*ml", "openapi*.json"}
+				}
+			}
+		}
+	}
 })

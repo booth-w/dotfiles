@@ -99,6 +99,7 @@ vim.opt.scrolloff = 999
 
 vim.opt.wrap = false
 vim.opt.linebreak = true
+vim.opt.colorcolumn = "80"
 
 vim.opt.formatoptions = "qlj"
 
@@ -139,6 +140,7 @@ vim.keymap.set("n", "<Leader>fb", ":Telescope file_browser path=%:p:h select_buf
 vim.keymap.set("n", "<Leader>lg", ":LazyGit<CR>", noremap)
 
 vim.keymap.set("n", "<Leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>", noremap)
+
 vim.keymap.set("i", "(", "()<left>", noremap)
 vim.keymap.set("i", "[", "[]<left>", noremap)
 vim.keymap.set("i", "{", "{}<left>", noremap)
@@ -170,7 +172,6 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 	pattern = "*",
 	command = "set norelativenumber"
 })
-
 vim.api.nvim_create_autocmd("InsertLeave", {
 	pattern = "*",
 	command = "set relativenumber"

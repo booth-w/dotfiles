@@ -138,6 +138,7 @@ vim.keymap.set("n", "<Leader>fb", ":Telescope file_browser path=%:p:h select_buf
 
 vim.keymap.set("n", "<Leader>lg", ":LazyGit<CR>", noremap)
 
+vim.keymap.set("n", "<Leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>", noremap)
 vim.keymap.set("i", "(", "()<left>", noremap)
 vim.keymap.set("i", "[", "[]<left>", noremap)
 vim.keymap.set("i", "{", "{}<left>", noremap)

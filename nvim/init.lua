@@ -315,8 +315,9 @@ require("telescope").setup({
 		file_browser = {
 			mappings = {
 				["n"] = {
+					["e"] = "select_default",
 					["h"] = fb_actions.goto_parent_dir,
-					["."] = fb_actions.toggle_hidden
+					["."] = fb_actions.toggle_hidden,
 				},
 			},
 			grouped = true

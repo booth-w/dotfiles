@@ -296,6 +296,12 @@ global_keys = gears.table.join(
 		end,
 		{description="toggle screenkey", group="launcher"}
 	),
+	awful.key({modkey, altkey}, "l",
+		function()
+			awful.spawn("slock")
+		end,
+		{description="lock screen with slock", group="launcher"}
+	),
 
 	-- rofi
 	awful.key({modkey}, "space",

@@ -1,0 +1,35 @@
+diff --git a/config.def.h b/config.def.h
+index 9855e21..fa9c8c2 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -1,12 +1,12 @@
+ /* user and group to drop privileges to */
+ static const char *user  = "nobody";
+-static const char *group = "nogroup";
++static const char *group = "nobody";
+ 
+ static const char *colorname[NUMCOLS] = {
+-	[INIT] =   "black",     /* after initialization */
+-	[INPUT] =  "#005577",   /* during input */
+-	[FAILED] = "#CC3333",   /* wrong password */
++	[INIT] =   "#2E3440",   /* after initialization */
++	[INPUT] =  "#2E3440",   /* during input */
++	[FAILED] = "#BF616A",   /* wrong password */
+ };
+ 
+ /* treat a cleared input like a wrong password (color) */
+-static const int failonclear = 1;
++static const int failonclear = 0;
+diff --git a/config.mk b/config.mk
+index dcd27d0..00d4c30 100644
+--- a/config.mk
++++ b/config.mk
+@@ -4,7 +4,7 @@ VERSION = 1.6
+ # Customize below to fit your system
+ 
+ # paths
+-PREFIX = /usr/local
++PREFIX = /usr
+ MANPREFIX = ${PREFIX}/share/man
+ 
+ X11INC = /usr/X11R6/include

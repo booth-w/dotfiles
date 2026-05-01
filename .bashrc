@@ -72,4 +72,4 @@ alias room-temp="ssh rpi.local python room-temp/main.py"
 alias setup='WINEPREFIX=$PWD wine setup.exe'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias watch="watch -c -n 0.1"
-alias yay="yay --answerdiff None --answerclean None --removemake"
+alias yay="yay --sudoloop --answerdiff None --answerclean None --removemake"

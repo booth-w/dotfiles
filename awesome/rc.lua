@@ -753,7 +753,9 @@ end)
 
 -- set tag names after startup
 gears.timer.delayed_call(function()
-	for _, tag in pairs(awful.screen.focused().tags) do
-		tag:emit_signal("property::selected", tag, tag.selected)
+	for s in screen do
+		for _, tag in pairs(s.tags) do
+			tag:emit_signal("property::selected", tag, tag.selected)
+		end
 	end
 end)

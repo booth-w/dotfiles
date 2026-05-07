@@ -392,6 +392,29 @@ global_keys = gears.table.join(
 	)
 )
 
+-- global number key binding
+for i = 1, 9 do
+	global_keys = gears.table.join(
+		global_keys,
+
+		-- focus client by wibar index
+		awful.key({"Control", altkey}, "#" .. i + 9,
+			function()
+				local screen = awful.screen.focused()
+				local tag = screen.tags[i]
+				if tag then
+					local clients = awful.client.visible(screen)
+					if clients[i] then
+						client.focus = clients[i]
+						clients[i]:raise()
+					end
+				end
+			end,
+			{description = "focus client #" .. i, group="client"}
+		)
+	)
+end
+
 -- client key bindings
 client_keys = gears.table.join(
 	-- close

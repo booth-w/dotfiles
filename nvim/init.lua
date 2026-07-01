@@ -317,6 +317,7 @@ require("telescope").setup({
 			mappings = {
 				["n"] = {
 					["e"] = "select_default",
+					["n"] = fb_actions.create,
 					["h"] = fb_actions.goto_parent_dir,
 					["."] = fb_actions.toggle_hidden,
 				},

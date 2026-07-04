@@ -24,7 +24,9 @@ require("lazy").setup({
 	{"hrsh7th/vim-vsnip"},
 
 	-- treesitter
-	{"nvim-treesitter/nvim-treesitter"},
+	{"nvim-treesitter/nvim-treesitter",
+		branch = "main"
+	},
 
 	-- telescope
 	{"nvim-telescope/telescope.nvim"},

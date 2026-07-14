@@ -240,13 +240,13 @@ global_keys = gears.table.join(
 	),
 
 	-- change layout
-	awful.key({modkey}, "l",
+	awful.key({modkey}, ";",
 		function()
 			awful.layout.inc(1)
 		end,
 		{description="select next", group="layout"}
 	),
-	awful.key({modkey, "Shift"}, "l",
+	awful.key({modkey, "Shift"}, ";",
 		function()
 			awful.layout.inc(-1)
 		end,
@@ -290,7 +290,7 @@ global_keys = gears.table.join(
 		end,
 		{description="toggle screenkey", group="launcher"}
 	),
-	awful.key({modkey, altkey}, "l",
+	awful.key({modkey, altkey}, ";",
 		function()
 			awful.spawn("slock")
 		end,
@@ -420,13 +420,13 @@ client_keys = gears.table.join(
 	),
 
 	-- change client focus
-	awful.key({"Control", altkey}, "Left",
+	awful.key({"Control", altkey}, "h",
 		function()
 			awful.client.focus.byidx(-1)
 		end,
 		{description="focus previous by index", group="client"}
 	),
-	awful.key({"Control", altkey}, "Right",
+	awful.key({"Control", altkey}, "l",
 		function()
 			awful.client.focus.byidx(1)
 		end,
@@ -434,13 +434,13 @@ client_keys = gears.table.join(
 	),
 
 	-- change client order
-	awful.key({modkey, "Control"}, "Left",
+	awful.key({modkey, "Control"}, "h",
 		function()
 			awful.client.swap.byidx(-1)
 		end,
 		{description="swap with next client", group="client"}
 	),
-	awful.key({modkey, "Control"}, "Right",
+	awful.key({modkey, "Control"}, "l",
 		function()
 			awful.client.swap.byidx(1)
 		end,
@@ -455,18 +455,8 @@ client_keys = gears.table.join(
 		{description = "move to master", group="client"}
 	),
 
-	-- move client to next tag
-	awful.key({modkey, altkey}, "Right",
-		function()
-			local tag = client.focus.screen.tags[client.focus.screen.selected_tag.index + 1]
-			if tag then
-				client.focus:move_to_tag(tag)
-				tag:emit_signal("property::selected", tag, tag.selected)
-			end
-		end,
-		{description = "move focused client to next tag", group="client"}
-	),
-	awful.key({modkey, altkey}, "Left",
+	-- move client to next/prev tag
+	awful.key({modkey, altkey}, "h",
 		function()
 			local tag = client.focus.screen.tags[client.focus.screen.selected_tag.index - 1]
 			if tag then
@@ -475,6 +465,16 @@ client_keys = gears.table.join(
 			end
 		end,
 		{description = "move focused client to previous tag", group="client"}
+	),
+	awful.key({modkey, altkey}, "l",
+		function()
+			local tag = client.focus.screen.tags[client.focus.screen.selected_tag.index + 1]
+			if tag then
+				client.focus:move_to_tag(tag)
+				tag:emit_signal("property::selected", tag, tag.selected)
+			end
+		end,
+		{description = "move focused client to next tag", group="client"}
 	),
 
 	-- minimize
@@ -533,13 +533,13 @@ global_keys = gears.table.join(
 	global_keys,
 
 	-- change tag
-	awful.key({modkey}, "Left",
+	awful.key({modkey}, "h",
 		function()
 			awful.tag.viewprev()
 		end,
 		{description="view previous", group="tag"}
 	),
-	awful.key({modkey}, "Right",
+	awful.key({modkey}, "l",
 		function()
 			awful.tag.viewnext()
 		end,
@@ -547,13 +547,13 @@ global_keys = gears.table.join(
 	),
 
 	-- change tag order
-	awful.key({modkey, "Shift"}, "Left",
+	awful.key({modkey, "Shift"}, "h",
 		function()
 			awful.tag.move(awful.screen.focused().selected_tag.index - 1, awful.screen.focused().selected_tag)
 		end,
 		{description="swap with previous tag", group="tag"}
 	),
-	awful.key({modkey, "Shift"}, "Right",
+	awful.key({modkey, "Shift"}, "l",
 		function()
 			awful.tag.move(awful.screen.focused().selected_tag.index + 1, awful.screen.focused().selected_tag)
 		end,

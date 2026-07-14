@@ -709,24 +709,6 @@ awful.rules.rules = {
 		properties = {
 			ontop = true
 		}
-	},
-
-	-- sptlrx
-	{
-		rule_any = {
-			name = {
-				"sptlrx"
-			}
-		},
-		properties = {
-			raise = false,
-			floating = true,
-			ontop = true,
-			width = 400,
-			height = 200,
-			x = awful.screen.focused().geometry.width - 400,
-			y = awful.screen.focused().geometry.height - 200
-		}
 	}
 }
 

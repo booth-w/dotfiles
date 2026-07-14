@@ -260,12 +260,6 @@ global_keys = gears.table.join(
 		end,
 		{description="open terminal", group="launcher"}
 	),
-	awful.key({modkey, "Control", altkey, "Shift"}, "l",
-		function()
-			awful.spawn(terminal .. " sptlrx")
-		end,
-		{description="open sptlrx", group="launcher"}
-	),
 	awful.key({"Control", altkey}, "f",
 		function()
 			awful.spawn("nemo")

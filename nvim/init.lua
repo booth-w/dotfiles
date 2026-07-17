@@ -141,8 +141,6 @@ vim.keymap.set("n", "<Leader>fb", ":Telescope file_browser path=%:p:h select_buf
 
 vim.keymap.set("n", "<Leader>lg", ":LazyGit<CR>", noremap)
 
-vim.keymap.set("n", "<Leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>", noremap)
-
 vim.keymap.set("i", "(", "()<left>", noremap)
 vim.keymap.set("i", "[", "[]<left>", noremap)
 vim.keymap.set("i", "{", "{}<left>", noremap)
@@ -368,11 +366,10 @@ cmp.setup({
 		["<C-e>"] = cmp.mapping.abort(),
 		["<TAB>"] = cmp.mapping.confirm({ select = true }),
 	},
-	sources = cmp.config.sources({
-		{name = "nvim_lsp"}
-	}, {
-		{name = "buffer"}
-	}),
+	sources = cmp.config.sources(
+		{{name = "nvim_lsp"}},
+		{{name = "buffer"}}
+	),
 	window = {
 		documentation = cmp.config.window.bordered(),
 		completion = cmp.config.window.bordered(),
@@ -383,6 +380,20 @@ vim.diagnostic.config({
   virtual_text = {
     prefix = "● "
   }
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local buf = args.buf
+		local opts = { noremap = true, silent = true, buffer = buf }
+
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+		vim.keymap.set("n", "ga", vim.lsp.buf.code_action, opts)
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+
+		vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float, opts)
+	end
 })
 
 vim.lsp.enable({

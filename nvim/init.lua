@@ -207,6 +207,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	end
 })
 
+-- space-required filetypes
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {"yaml"},
+	callback = function()
+		vim.opt_local.expandtab = true
+	end
+})
+
 -- iso dates
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = {"python", "javascript", "typescript", "go", "lua", "sh"},

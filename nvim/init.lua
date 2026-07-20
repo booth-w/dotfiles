@@ -245,10 +245,19 @@ vim.api.nvim_create_autocmd("FileType", {
 	end
 })
 
+-- markdown table of contents
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
 		vim.keymap.set("n", "<Leader>gt", ":Toc<CR>", { buffer = true, noremap = true })
+	end
+})
+
+-- go fmt on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.go",
+	callback = function()
+		vim.lsp.buf.format({ async = false })
 	end
 })
 

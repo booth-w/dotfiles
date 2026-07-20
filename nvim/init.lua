@@ -35,6 +35,9 @@ require("lazy").setup({
 		build = "make"
 	},
 
+	-- debug adapter protocol client
+	{"mfussenegger/nvim-dap"},
+
 	-- auto shiftwidth expandtab
 	{"tpope/vim-sleuth"},
 

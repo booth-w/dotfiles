@@ -1,15 +1,15 @@
 [flags]
-group_processes = true
+processes.default_grouped = true
 time_delta = 10000
-process_memory_as_value = true
+processes.default_memory_value = true
 show_table_scroll_position = true
-memory_legend = "top-left"
-network_legend = "top-left"
+memory_graph.legend_position = "top-left"
+network_graph.legend_position = "top-left"
 
 [[row]]
-  ratio=3
-  [[row.child]]
-  type="cpu"
+	ratio=3
+	[[row.child]]
+	type="cpu"
 [[row]]
 	ratio=3
 	[[row.child]]
@@ -19,13 +19,13 @@ network_legend = "top-left"
 	[[row.child]]
 		type="disk"
 [[row]]
-  ratio=4
-  [[row.child]]
-    type="net"
-  [[row.child]]
+	ratio=4
+	[[row.child]]
+		type="net"
+	[[row.child]]
 		ratio=2
 		type="proc"
-    default=true
+		default=true
 
 [cpu]
 default = "average"

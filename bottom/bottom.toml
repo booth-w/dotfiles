@@ -1,10 +1,27 @@
 [flags]
-processes.default_grouped = true
 time_delta = 10000
 processes.default_memory_value = true
 show_table_scroll_position = true
-memory_graph.legend_position = "top-left"
-network_graph.legend_position = "top-left"
+
+[cpu]
+default = "average"
+
+[memory]
+legend_position = "top-left"
+
+[network]
+legend_position = "top-left"
+
+[network.interface_filter]
+is_list_ignored = false
+regex = true
+list = ["eth.+", "en.+", "wl.+"]
+
+[processes]
+default_grouped = true
+
+[disk.mount_filter]
+list = ["/boot"]
 
 [[row]]
 	ratio=3
@@ -26,14 +43,3 @@ network_graph.legend_position = "top-left"
 		ratio=2
 		type="proc"
 		default=true
-
-[cpu]
-default = "average"
-
-[disk.mount_filter]
-list = ["/boot"]
-
-[network.interface_filter]
-is_list_ignored = false
-regex = true
-list = ["eth.+", "en.+", "wl.+"]

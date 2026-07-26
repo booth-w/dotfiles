@@ -19,4 +19,5 @@ cp -r rofi ~/.config/
 cp -r superfile ~/.config/
 
 mkdir -p ~/scripts/
-cp dot-sync.sh ~/scripts/
+cp dot-sync-save.sh ~/scripts/
+cp dot-sync-load.sh ~/scripts/

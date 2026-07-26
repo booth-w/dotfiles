@@ -11,8 +11,8 @@ cp -r ~/.config/rofi/ ~/projects/dotfiles/
 cp -r ~/.config/superfile/config.toml ~/projects/dotfiles/superfile/
 cp -r ~/.config/superfile/hotkeys.toml ~/projects/dotfiles/superfile/
 
-cp ~/scripts/dot-sync-save.sh ~/projects/dotfiles/scripts/
-cp ~/scripts/dot-sync-load.sh ~/projects/dotfiles/scripts/
+cp ~/scripts/dot-sync-save.sh ~/projects/dotfiles/
+cp ~/scripts/dot-sync-load.sh ~/projects/dotfiles/
 
 cd ~/projects/dotfiles/
 lazygit

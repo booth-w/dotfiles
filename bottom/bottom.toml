@@ -1,6 +1,5 @@
 [flags]
 time_delta = 10000
-processes.default_memory_value = true
 show_table_scroll_position = true
 
 [cpu]
@@ -19,6 +18,7 @@ list = ["eth.+", "en.+", "wl.+"]
 
 [processes]
 default_grouped = true
+default_memory_value = true
 
 [disk.mount_filter]
 list = ["/boot"]

@@ -33,11 +33,9 @@ do
 	end)
 end
 
--- Copyright Pavel Makhov
--- MIT
 -- https://github.com/streetturtle/awesome-wm-widgets
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
-local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+local volume_widget = require("awesome-wm-widgets.wpctl-widget.volume")
 
 -- theme
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")

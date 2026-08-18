@@ -344,19 +344,19 @@ global_keys = gears.table.join(
 	-- volume
 	awful.key({}, "XF86AudioRaiseVolume",
 		function()
-			awful.util.spawn("amixer set Master 5%+", false)
+			volume_widget:inc()
 		end,
 		{description = "volume up", group="volume"}
 	),
 	awful.key({}, "XF86AudioLowerVolume",
 		function()
-			awful.util.spawn("amixer set Master 5%-", false)
+			volume_widget:dec()
 		end,
 		{description = "volume down", group="volume"}
 	),
 	awful.key({}, "XF86AudioMute",
 		function()
-			awful.util.spawn("amixer set Master toggle", false)
+			volume_widget:toggle()
 		end,
 		{description = "toggle mute", group="volume"}
 	),

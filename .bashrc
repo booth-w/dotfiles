@@ -58,6 +58,7 @@ alias download="yt-dlp --embed-thumbnail --add-metadata --sub-langs all,-live_ch
 alias duf="duf --si --hide special --hide-mp /boot"
 alias feh="feh --scale-down --image-bg '#2E3440'"
 alias gallery-dl="gallery-dl --config ~/.config/gallery-dl/config.conf"
+alias gotest="go test ./..."
 alias grep="grep --color=auto"
 alias http-server="python -m http.server"
 alias icat="kitten icat --align left"

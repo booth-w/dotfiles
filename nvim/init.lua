@@ -411,6 +411,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 		vim.keymap.set("n", "ga", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+		vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
 
 		vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float, opts)
 	end

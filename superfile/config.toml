@@ -30,7 +30,7 @@ default_directory = '.'
 file_size_use_si = true
 #
 # Default sort type (0: Name, 1: Size, 2: Date Modified, 3: Type, 4: Natural).
-default_sort_type = 0
+default_sort_type = 4
 #
 # Default sort order (false: Ascending, true: Descending).
 sort_order_reversed = false

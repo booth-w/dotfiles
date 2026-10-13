@@ -4,7 +4,8 @@ return {
 		{"nvim-telescope/telescope-file-browser.nvim"},
 		{"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make"
-		}
+		},
+		{"nvim-telescope/telescope-ui-select.nvim"}
 	},
 
 	config = function()
@@ -52,12 +53,17 @@ return {
 						},
 					},
 					grouped = true
+				},
+				["ui-select"] = {
+					require("telescope.themes").get_dropdown {
+					}
 				}
 			}
 		}
 
 		require("telescope").load_extension("file_browser")
 		require("telescope").load_extension("fzf")
+		require("telescope").load_extension("ui-select")
 
 		local noremap = { noremap = true, silent = true }
 		vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>", noremap)

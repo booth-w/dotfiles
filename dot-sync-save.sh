@@ -1,18 +1,31 @@
 #!/usr/bin/env bash
 
 
-cp -r ~/.bashrc ~/projects/dotfiles/
-cp -r ~/.config/awesome/ ~/projects/dotfiles/
-cp -r ~/.config/bottom/ ~/projects/dotfiles/
-cp -r ~/.config/fastfetch/ ~/projects/dotfiles/
-cp -r ~/.config/kitty/ ~/projects/dotfiles/
-cp -r ~/.config/nvim/ ~/projects/dotfiles/
-cp -r ~/.config/rofi/ ~/projects/dotfiles/
-cp -r ~/.config/superfile/config.toml ~/projects/dotfiles/superfile/
-cp -r ~/.config/superfile/hotkeys.toml ~/projects/dotfiles/superfile/
-
-cp ~/scripts/dot-sync-save.sh ~/projects/dotfiles/
-cp ~/scripts/dot-sync-load.sh ~/projects/dotfiles/
-
+set -e
 cd ~/projects/dotfiles/
+
+rm -rf .bashrc
+rm -rf awesome/
+rm -rf bottom/
+rm -rf fastfetch/
+rm -rf kitty/
+rm -rf nvim/
+rm -rf rofi/
+rm -rf superfile/
+
+cp -r ~/.bashrc .
+cp -r ~/.config/awesome/ .
+cp -r ~/.config/bottom/ .
+cp -r ~/.config/fastfetch/ .
+cp -r ~/.config/kitty/ .
+cp -r ~/.config/nvim/ .
+cp -r ~/.config/rofi/ .
+
+mkdir -p ./superfile/
+cp -r ~/.config/superfile/config.toml ./superfile/
+cp -r ~/.config/superfile/hotkeys.toml ./superfile/
+
+cp ~/scripts/dot-sync-save.sh .
+cp ~/scripts/dot-sync-load.sh .
+
 lazygit

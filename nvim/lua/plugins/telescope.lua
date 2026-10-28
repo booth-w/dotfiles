@@ -72,5 +72,6 @@ return {
 		vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>", noremap)
 		vim.keymap.set("n", "<Leader>fw", ":Telescope grep_string<CR>", noremap)
 		vim.keymap.set("n", "<Leader>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", noremap)
+		vim.keymap.set("n", "grr", ":Telescope lsp_references<CR>", noremap)
 	end
 }

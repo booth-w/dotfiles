@@ -64,6 +64,7 @@ return {
 		require("telescope").load_extension("file_browser")
 		require("telescope").load_extension("fzf")
 		require("telescope").load_extension("ui-select")
+		require("telescope").load_extension("fidget")
 
 		local noremap = { noremap = true, silent = true }
 		vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>", noremap)

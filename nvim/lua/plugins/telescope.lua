@@ -14,6 +14,7 @@ return {
 
 		require("telescope").setup {
 			defaults = {
+				initial_mode = "normal",
 				layout_config = {
 					horizontal = {
 						width = {

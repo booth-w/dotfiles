@@ -52,6 +52,7 @@ return {
 
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+				vim.keymap.set("n", "gn", vim.lsp.buf.rename, opts)
 				vim.keymap.set("n", "ga", vim.lsp.buf.code_action, opts)
 				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 				vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)

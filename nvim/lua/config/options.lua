@@ -3,9 +3,11 @@ vim.opt.title = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt_local.tabstop = 2
-vim.opt_local.shiftwidth = 2
-vim.opt_local.expandtab = false
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = false
+
+vim.opt.scrolloff = 999
 
 vim.opt.colorcolumn = "80"
 

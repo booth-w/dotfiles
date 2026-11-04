@@ -14,7 +14,6 @@ return {
 
 		require("telescope").setup {
 			defaults = {
-				initial_mode = "normal",
 				layout_config = {
 					horizontal = {
 						width = {
@@ -45,6 +44,7 @@ return {
 			},
 			extensions = {
 				file_browser = {
+					initial_mode = "normal",
 					mappings = {
 						["n"] = {
 							["e"] = "select_default",

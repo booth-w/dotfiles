@@ -34,8 +34,9 @@ cclear() {
 }
 
 date-dir() {
-	mkdir $(date --iso)
-	cd $(date --iso)
+	dir=$(date --iso)
+	[ -d "$dir" ] || mkdir "$dir"
+	cd "$dir"
 }
 
 gclone() {
